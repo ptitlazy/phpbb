@@ -35,7 +35,7 @@ class purge extends \phpbb\console\command\command
 	/** @var \phpbb\config\config */
 	protected $config;
 
-	public function __construct(\phpbb\cache\driver\driver_interface $cache, \phpbb\db\driver\driver_interface $db, \phpbb\auth\auth $auth, \phpbb\log\log $log, \phpbb\user $user, \phpbb\config\config $config)
+	public function __construct(\phpbb\cache\driver\driver_interface $cache, \phpbb\db\driver\driver_interface $db, \phpbb\auth\auth $auth, \phpbb\log\log_interface $log, \phpbb\user $user, \phpbb\config\config $config)
 	{
 		$this->cache = $cache;
 		$this->db = $db;
