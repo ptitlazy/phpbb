@@ -46,7 +46,7 @@ class phpbb_controller_helper_route_test extends phpbb_test_case
 			$this->extension_manager,
 			new \phpbb\filesystem(),
 			dirname(__FILE__) . '/',
-			new phpbb_mock_cache()
+			new \phpbb\cache\service(new phpbb_mock_cache(), $this->config, $this->getMock('\phpbb\db\driver\driver_interface'), $phpbb_root_path, $phpEx)
 		);
 		$this->provider = new \phpbb\controller\provider();
 		$this->provider->find_routing_files($finder);
