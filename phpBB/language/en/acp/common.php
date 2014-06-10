@@ -231,6 +231,11 @@ $lang = array_merge($lang, array(
 
 	'CLI_DESCRIPTION_OPTION_SHELL'			=> 'Launch the shell.',
 
+	'CLI_DESCRIPTION_USER_ADD'					=> 'Add a new user',
+	'CLI_DESCRIPTION_USER_ADD_OPTION_USERNAME'	=> 'Username of the new user',
+	'CLI_DESCRIPTION_USER_ADD_OPTION_PASSWORD'	=> 'Password of the new user',
+	'CLI_DESCRIPTION_USER_ADD_OPTION_EMAIL'		=> 'E-mail address of the new user',
+
 	'COLOUR_SWATCH'			=> 'Web-safe colour swatch',
 	'CONFIG_UPDATED'		=> 'Configuration updated successfully.',
 	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
@@ -307,6 +312,8 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_SHORT'		=> 'The provided value for the setting “%1$s” is too short. The minimum acceptable length is %2$d.',
 
 	'SHOW_ALL_OPERATIONS'	=> 'Show all operations',
+
+	'SUCCESS_ADD_USER'		=> 'Successfully added user %s.',
 
 	'TASKS_NOT_READY'			=> 'Not ready tasks:',
 	'TASKS_READY'			=> 'Ready tasks:',
