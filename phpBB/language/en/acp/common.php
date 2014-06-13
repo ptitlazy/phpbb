@@ -311,12 +311,12 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Show all operations',
 
-	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_NOT_READY'		=> 'Not ready tasks:',
 	'TASKS_READY'			=> 'Ready tasks:',
 	'THUMBNAIL_DELETED'		=> '%1$s (%2$s) deleted.',
 	'THUMBNAIL_SKIPPED'		=> '%1$s (%2$s) skipped.',
 	'THUMBNAIL_GENERATED'	=> '%1$s (%2$s) generated.',
-	'TOTAL_SIZE'      		=> 'Total size',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Place each username on a separate line.',
