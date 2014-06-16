@@ -113,3 +113,12 @@ services:
             - @dbal.conn
         tags:
             - { name: console.command }
+
+    console.command.search.create_index:
+        class: phpbb\console\command\search\create_index
+        arguments:
+            - @db
+            - @auth
+            - @user
+        tags:
+            - { name: console.command }
