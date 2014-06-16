@@ -117,8 +117,9 @@ services:
     console.command.search.create_index:
         class: phpbb\console\command\search\create_index
         arguments:
-            - @db
+            - @dbal.conn
             - @auth
             - @user
+            - @config
         tags:
             - { name: console.command }
