@@ -242,6 +242,13 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_USER_ADD_OPTION_PASSWORD'	=> 'Password of the new user',
 	'CLI_DESCRIPTION_USER_ADD_OPTION_EMAIL'		=> 'E-mail address of the new user',
 
+	'CLI_DESCRIPTION_UPDATE_CHECK'		=> 'Check if the board is up to date.',
+	'CLI_DESCRIPTION_UPDATE_CHECK_OPTION_CACHE'		=> 'Run check command with cache.',
+	'CLI_DESCRIPTION_UPDATE_CHECK_OPTION_STABILITY'	=> 'Run command choosing to check only stable or unstable versions.',
+	'CLI_DESCRIPTION_UPDATE_CHECK_ARGUMENT_1' => 'Name of the extension to check (if all, checks all the extensions)',
+
+	'CLI_ERROR_INVALID_STABILITY' => '"%s" is not a valid stability.',
+
 	'COLOUR_SWATCH'			=> 'Web-safe colour swatch',
 	'CONFIG_UPDATED'		=> 'Configuration updated successfully.',
 	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
@@ -330,6 +337,11 @@ $lang = array_merge($lang, array(
 	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Place each username on a separate line.',
 	'USER_CONTROL_PANEL'	=> 'User Control Panel',
+
+	'UPDATE_CHECK_FAIL'		=> 'The option --stability=%s does not exit.',
+	'UPDATE_NEEDED'			=> 'The board is not up to date.',
+	'UPDATE_NOT_NEEDED'		=> 'The board is up to date.',
+	'UPDATES_AVAILABLE'		=> 'Updates available:',
 
 	'WARNING'				=> 'Warning',
 ));

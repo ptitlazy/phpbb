@@ -70,7 +70,7 @@ class acp_extensions
 		// If they've specified an extension, let's load the metadata manager and validate it.
 		if ($ext_name)
 		{
-			$md_manager = new \phpbb\extension\metadata_manager($ext_name, $config, $phpbb_extension_manager, $template, $user, $phpbb_root_path);
+			$md_manager = new \phpbb\extension\metadata_manager($ext_name, $config, $phpbb_extension_manager, $user, $phpbb_root_path);
 
 			try
 			{
@@ -281,11 +281,11 @@ class acp_extensions
 
 			case 'details':
 				// Output it to the template
-				$md_manager->output_template_data();
+				$md_manager->output_template_data($template);
 
 				try
 				{
-					$updates_available = $this->version_check($md_manager, $request->variable('versioncheck_force', false));
+					$updates_available = $phpbb_extension_manager->version_check($md_manager, $request->variable('versioncheck_force', false), $this->config['extension_force_unstable'] ? 'unstable' : null);
 
 					$template->assign_vars(array(
 						'S_UP_TO_DATE'		=> empty($updates_available),
@@ -328,7 +328,7 @@ class acp_extensions
 
 		foreach ($phpbb_extension_manager->all_enabled() as $name => $location)
 		{
-			$md_manager = $phpbb_extension_manager->create_extension_metadata_manager($name, $this->template);
+			$md_manager = $phpbb_extension_manager->create_extension_metadata_manager($name);
 
 			try
 			{
@@ -339,7 +339,7 @@ class acp_extensions
 				);
 
 				$force_update = $this->request->variable('versioncheck_force', false);
-				$updates = $this->version_check($md_manager, $force_update, !$force_update);
+				$updates = $phpbb_extension_manager->version_check($md_manager, $force_update, !$force_update);
 
 				$enabled_extension_meta_data[$name]['S_UP_TO_DATE'] = empty($updates);
 				$enabled_extension_meta_data[$name]['S_VERSIONCHECK'] = true;
@@ -384,7 +384,7 @@ class acp_extensions
 
 		foreach ($phpbb_extension_manager->all_disabled() as $name => $location)
 		{
-			$md_manager = $phpbb_extension_manager->create_extension_metadata_manager($name, $this->template);
+			$md_manager = $phpbb_extension_manager->create_extension_metadata_manager($name);
 
 			try
 			{
@@ -395,7 +395,7 @@ class acp_extensions
 				);
 
 				$force_update = $this->request->variable('versioncheck_force', false);
-				$updates = $this->version_check($md_manager, $force_update, !$force_update);
+				$updates = $phpbb_extension_manager->version_check($md_manager, $force_update, !$force_update);
 
 				$disabled_extension_meta_data[$name]['S_UP_TO_DATE'] = empty($updates);
 				$disabled_extension_meta_data[$name]['S_VERSIONCHECK'] = true;
@@ -443,7 +443,7 @@ class acp_extensions
 
 		foreach ($uninstalled as $name => $location)
 		{
-			$md_manager = $phpbb_extension_manager->create_extension_metadata_manager($name, $this->template);
+			$md_manager = $phpbb_extension_manager->create_extension_metadata_manager($name);
 
 			try
 			{
@@ -454,7 +454,7 @@ class acp_extensions
 				);
 
 				$force_update = $this->request->variable('versioncheck_force', false);
-				$updates = $this->version_check($md_manager, $force_update, !$force_update);
+				$updates = $phpbb_extension_manager->version_check($md_manager, $force_update, !$force_update);
 
 				$available_extension_meta_data[$name]['S_UP_TO_DATE'] = empty($updates);
 				$available_extension_meta_data[$name]['S_VERSIONCHECK'] = true;
