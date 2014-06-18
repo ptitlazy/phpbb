@@ -225,6 +225,9 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> 'Back',
 
+	'CLI_DESCRIPTION_SEARCH_CREATE_INDEX'	=> 'Generates a search index.',
+	'CLI_DESCRIPTION_SEARCH_CREATE_INDEX_OPTION_BATCH_SIZE'		=> 'The size of a batch',
+	'CLI_DESCRIPTION_SEARCH_CREATE_INDEX_OPTION_INDEX_TYPE'		=> 'The type of search index wanted',
 	'CLI_DESCRIPTION_CRON_LIST'				=> 'Prints a list of ready and unready cron jobs.',
 	'CLI_DESCRIPTION_CRON_RUN'				=> 'Runs all ready cron tasks.',
 	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'	=> 'Name of the task to be run',

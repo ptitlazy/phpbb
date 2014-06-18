@@ -121,6 +121,15 @@ services:
         tags:
             - { name: console.command }
 
+    console.command.search.create_index:
+        class: phpbb\console\command\search\create_index
+        arguments:
+            - @dbal.conn
+            - @auth
+            - @user
+            - @config
+        tags:
+            - { name: console.command }
     console.command.thumbnail.generate:
         class: phpbb\console\command\thumbnail\generate
         arguments:
