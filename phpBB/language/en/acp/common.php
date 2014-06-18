@@ -228,6 +228,9 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_CRON_LIST'				=> 'Prints a list of ready and unready cron jobs.',
 	'CLI_DESCRIPTION_CRON_RUN'				=> 'Runs all ready cron tasks.',
 	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'	=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_THUMBNAIL_DELETE'		=> 'Delete all existing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_GENERATE'	=> 'Generate all missing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_RECREATE'	=> 'Recreate all thumbnails.',
 
 	'CLI_DESCRIPTION_OPTION_SHELL'			=> 'Launch the shell.',
 
@@ -308,9 +311,12 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Show all operations',
 
-	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_NOT_READY'		=> 'Not ready tasks:',
 	'TASKS_READY'			=> 'Ready tasks:',
-	'TOTAL_SIZE'      		=> 'Total size',
+	'THUMBNAIL_DELETED'		=> '%1$s (%2$s) deleted.',
+	'THUMBNAIL_SKIPPED'		=> '%1$s (%2$s) skipped.',
+	'THUMBNAIL_GENERATED'	=> '%1$s (%2$s) generated.',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Place each username on a separate line.',
