@@ -15,6 +15,7 @@ services:
         class: phpbb\console\command\config\delete
         arguments:
             - @config
+            - @user
         tags:
             - { name: console.command }
 
@@ -22,6 +23,7 @@ services:
         class: phpbb\console\command\config\increment
         arguments:
             - @config
+            - @user
         tags:
             - { name: console.command }
 
@@ -29,6 +31,7 @@ services:
         class: phpbb\console\command\config\get
         arguments:
             - @config
+            - @user
         tags:
             - { name: console.command }
 
@@ -36,6 +39,7 @@ services:
         class: phpbb\console\command\config\set
         arguments:
             - @config
+            - @user
         tags:
             - { name: console.command }
 
@@ -43,6 +47,7 @@ services:
         class: phpbb\console\command\config\set_atomic
         arguments:
             - @config
+            - @user
         tags:
             - { name: console.command }
 
@@ -87,6 +92,7 @@ services:
         arguments:
             - @ext.manager
             - @log
+            - @user
         tags:
             - { name: console.command }
 
@@ -95,6 +101,7 @@ services:
         arguments:
             - @ext.manager
             - @log
+            - @user
         tags:
             - { name: console.command }
 
@@ -103,6 +110,7 @@ services:
         arguments:
             - @ext.manager
             - @log
+            - @user
         tags:
             - { name: console.command }
 
@@ -111,6 +119,7 @@ services:
         arguments:
             - @ext.manager
             - @log
+            - @user
         tags:
             - { name: console.command }
 
@@ -118,6 +127,7 @@ services:
         class: phpbb\console\command\fixup\recalculate_email_hash
         arguments:
             - @dbal.conn
+            - @user
         tags:
             - { name: console.command }
 
