@@ -1,0 +1,3 @@
+notifications_controller:
+    pattern: /notifications/test
+    defaults: { _controller: vendor_notifications.controller:handle }

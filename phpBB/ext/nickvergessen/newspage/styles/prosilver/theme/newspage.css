@@ -1,0 +1,30 @@
+.icon-newspage {
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+	padding: 1px 0 0 17px;
+	background-image: url("images/icon_news.gif");
+}
+
+.rtl .icon-newspage {
+	background-position: 100% 50%;
+	padding: 1px 17px 0 0;
+}
+
+a.arrow-right-on-left {
+	background-position: 0 60%;
+}
+
+a.arrow-right-on-left, a.arrow-right-on-left:active,
+a.arrow-right-on-left:visited {
+	padding-left: 12px;
+	padding-right: 0;
+}
+
+a.arrow-right-on-left:hover {
+	text-decoration: none;
+	background-position: 3px 60%;
+}
+
+.newspage-dropdown ul li:first-child {
+	padding-left: 5px;
+}
